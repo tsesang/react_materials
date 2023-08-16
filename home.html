@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      width: 70%;
+      margin: 50px auto;
+      font-family: sans-serif;
+      text-align: justify;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    table * {
+      padding: 15px;
+      text-align: justify;
+    }
+
+    th {
+      text-transform: uppercase;
+    }
+  </style>
+  <body>
+    <div id="container"></div>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      var time = new Date().getHours();
+      var min = new Date().getMinutes();
+      var second = new Date().getSeconds();
+
+      function checkTime(time) {
+        if (time > 12) {
+          return "PM";
+        }
+        return "AM";
+      }
+
+      function sayGreeting(time) {
+        if (time > 5 && time < 19) {
+          return "have a nice day !!!";
+        } else return "good night  !!!";
+      }
+
+      function hello() {
+        return "helo wrold";
+      }
+
+
+
+      ReactDOM.render(
+        <div class="container">
+          <h1>
+            {time} : {min} : {second} {checkTime(time)}
+          </h1>
+          <h2>{sayGreeting(time)}</h2>
+          <h1>{hello()}</h1>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta
+            debitis iure deleniti ut, neque, dignissimos maiores dolore, dolorum
+            eaque repellat numquam quae aliquam excepturi quia autem cumque
+            quidem rerum doloremque!
+          </p>
+          <h3>welcoem to react class</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
+            error recusandae, itaque possimus cum amet labore, enim qui
+            explicabo nulla ipsa eius dolor voluptatem, ad voluptatibus
+            repellendus laboriosam voluptate quae maxime praesentium
+            perferendis? Alias cum placeat illum, tempore itaque, laboriosam
+            nesciunt molestiae nisi animi ea amet? Quidem incidunt facilis id
+            ipsam alias modi voluptatem nam tempora, eum cum? Eligendi maxime,
+            quaerat inventore eius accusamus blanditiis placeat vitae
+            voluptates! Dolores fuga dolor cum, nulla praesentium nam modi quis,
+            eum, quas vitae expedita totam sapiente. Labore sapiente veniam
+            ullam? Saepe autem pariatur a excepturi facilis perspiciatis ipsum
+            odit cumque illum quidem ipsa repellendus voluptatibus maiores
+            tenetur molestias repellat aliquid suscipit labore impedit,
+            accusamus ea. Optio, culpa quos? Cupiditate quas harum ab qui, nemo
+            dolore atque dicta quibusdam quod quaerat officiis laboriosam ad
+            facilis explicabo iste dolores excepturi. Doloremque aliquam iure
+            excepturi eligendi, provident mollitia! Laborum a facilis molestias
+            ipsum tenetur repudiandae dolorem quasi maiores impedit vel,
+            aspernatur, cumque non delectus debitis velit dicta! Qui a dicta
+            doloremque alias numquam soluta architecto fugiat, voluptatibus
+            animi, quos neque repellat recusandae velit laboriosam culpa quam
+            tenetur reiciendis impedit temporibus quisquam vero veritatis
+            delectus nesciunt. Mollitia esse ex id incidunt architecto sint ea
+            quasi? Recusandae, similique.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo hic,
+            pariatur commodi minus optio et porro omnis magnam sequi quam.
+          </p>
+        </div>,
+        document.getElementById("container")
+      );
+    </script>
+  </body>
+</html>
